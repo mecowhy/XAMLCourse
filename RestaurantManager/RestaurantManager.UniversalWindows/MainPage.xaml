@@ -6,7 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <Page.TopAppBar>
+        <AppBar>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <AppBarButton x:Name="btHome" Icon="Home" Label="Home" Click="btHome_Click"/>
+            </StackPanel>
+        </AppBar>
+    </Page.TopAppBar>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.4*"/>
@@ -19,7 +25,7 @@
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Restaurant Manager" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
         <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="Internal Test Version" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
-        <TextBlock Grid.Row="2" Grid.Column="0" Text="**Go To Orders View**" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBlock Grid.Row="2" Grid.Column="1" Text="**Submit Order**" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button x:Name="btOrdersView"  Grid.Row="2" Grid.Column="0" Content="Go To Orders View" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btOrdersView_Click"/>
+        <Button x:Name="btSubmit" Grid.Row="2" Grid.Column="1" Content="Submit Order" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btSubmit_Click"/>
     </Grid>
 </Page>

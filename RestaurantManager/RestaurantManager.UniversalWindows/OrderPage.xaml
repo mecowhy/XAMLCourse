@@ -6,7 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <Page.TopAppBar>
+        <AppBar>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <AppBarButton x:Name="btHome" Icon="Home" Label="Home" Click="btHome_Click" />
+            </StackPanel>
+        </AppBar>
+    </Page.TopAppBar>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.2*" />
@@ -20,9 +26,12 @@
             <ColumnDefinition Width="0.25*"/>
             <ColumnDefinition Width="0.25*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="**Add to Order**"/>
-        <TextBlock Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="**Submit Order**" Grid.ColumnSpan="2"/>
+        <Button x:Name="btAddToOrder" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Add to Order" Click="btAddToOrder_Click"/>
+        <Button x:Name="btSubmitOrder" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Submit Order" Grid.ColumnSpan="2" Click="btSubmitOrder_Click"/>
         <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Special Requests:"/>
         <TextBlock Grid.Row="1" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Order Items:"/>
+        <ListView Grid.Row="1" Grid.Column="0" Background="#FF229CD4" Grid.RowSpan="3" />
+        <ListView Grid.Row="2" Grid.Column="2" Background="#FF42B830" Grid.RowSpan="2"/>
+
     </Grid>
 </Page>
