@@ -18,7 +18,7 @@
             <RowDefinition Height="0.9*"/>
             <RowDefinition Height="0.1*"/>
         </Grid.RowDefinitions>
-        <GridView Grid.Row="0" Grid.Column="0" Background="#FFB47C7C"/>
+        <GridView Grid.Row="0" Grid.Column="0" Background="#FFB47C7C" ItemsSource="{Binding OrderItems, Source={StaticResource DataManager}}"/>
         <Button x:Name="btClear"  Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Clear All Orders" Click="btClear_Click"/>
     </Grid>
 </Page>

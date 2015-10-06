@@ -30,8 +30,8 @@
         <Button x:Name="btSubmitOrder" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Submit Order" Grid.ColumnSpan="2" Click="btSubmitOrder_Click"/>
         <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Special Requests:"/>
         <TextBlock Grid.Row="1" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Order Items:"/>
-        <ListView Grid.Row="1" Grid.Column="0" Background="#FF229CD4" Grid.RowSpan="3" />
-        <ListView Grid.Row="2" Grid.Column="2" Background="#FF42B830" Grid.RowSpan="2"/>
+        <ListView x:Name="lvMenuItems" Grid.Row="1" Grid.Column="0" Background="#FF229CD4" Grid.RowSpan="3" ItemsSource="{Binding MenuItems, Source={StaticResource DataManager}}" />
+        <ListView x:Name="lvOrderItems" Grid.Row="2" Grid.Column="2" Background="#FF42B830" Grid.RowSpan="2" ItemsSource="{Binding CurrentlySelectedMenuItems , Source={StaticResource DataManager}}"/>
 
     </Grid>
 </Page>
